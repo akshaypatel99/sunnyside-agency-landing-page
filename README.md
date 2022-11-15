@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/sunnyside-agency-landing-page](https://github.com/akshaypatel99/frontend-mentor/tree/main/sunnyside-agency-landing-page)
+- Solution URL: [https://github.com/akshaypatel99/sunnyside-agency-landing-page](https://github.com/akshaypatel99/sunnyside-agency-landing-page)
 - Live Site URL: [https://akshaypatel99.github.io/sunnyside-agency-landing-page/](https://akshaypatel99.github.io/sunnyside-agency-landing-page/)
 
 ## My process
