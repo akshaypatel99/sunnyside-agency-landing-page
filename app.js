@@ -1,6 +1,13 @@
-let menuBtn = document.getElementById('menu-button');
+const menuBtn = document.getElementById('mobile-nav-toggle');
+const nav = document.getElementById('primary-navigation');
 
 menuBtn.addEventListener('click', () => {
-	let menu = document.getElementById('menu');
-	menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+	const visiblity = nav.getAttribute('data-visible');
+	if (visiblity === 'false') {
+		nav.setAttribute('data-visible', true);
+		menuBtn.setAttribute('aria-expanded', true);
+	} else {
+		nav.setAttribute('data-visible', false);
+		menuBtn.setAttribute('aria-expanded', false);
+	}
 });

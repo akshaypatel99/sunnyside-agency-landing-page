@@ -36,15 +36,26 @@
 			<div class="logo-container">
 				<img src="./images/logo.svg" alt="Sunnyside logo" />
 			</div>
+
+			<button
+				id="mobile-nav-toggle"
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false">
+				<img
+					src="./images/icon-hamburger.svg"
+					alt=""
+					id="toggle-menu"
+					class="toggle-menu"
+					aria-hidden />
+				<span class="sr-only">Menu</span>
+			</button>
+
 			<nav>
-				<button id="menu-button" class="mobile-menu-control">
-					<img
-						src="./images/icon-hamburger.svg"
-						alt="toggle menu"
-						id="toggle-menu"
-						class="toggle-menu" />
-				</button>
-				<ul id="menu" class="menu">
+				<ul
+					id="primary-navigation"
+					class="primary-navigation"
+					data-visible="false">
 					<li><a href="#">About</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Projects</a></li>

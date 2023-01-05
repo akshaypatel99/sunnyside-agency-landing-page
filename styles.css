@@ -46,17 +46,18 @@ body {
   height: 5rem;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   padding: 1.5rem;
   z-index: 10;
 }
 
-.mobile-menu-control {
+.mobile-nav-toggle {
   border: none;
   background-color: transparent;
+  position: absolute;
+  right: 1.5rem;
 }
 
-.menu {
+.primary-navigation {
   width: calc(100vw - 3rem);
   height: 320px;
   position: absolute;
@@ -70,7 +71,11 @@ body {
   padding: 0 1.5rem;
 }
 
-.menu::after {
+.primary-navigation[data-visible='true']{
+  display: flex;
+}
+
+.primary-navigation::after {
   content: "";
   position: absolute;
   width:0;
@@ -83,7 +88,7 @@ body {
   border-bottom: solid 30px var(--white);
 }
 
-.menu li a {
+.primary-navigation li a {
   color: var(--very-dark-grayish-blue);
   font-size: var(--font-size);
 }
@@ -319,12 +324,15 @@ footer nav {
 }
 
 .sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
+  position: absolute; 
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px; 
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 @media screen and (min-width: 1440px) {
@@ -333,13 +341,14 @@ footer nav {
   .nav-header {
     padding: 2rem;
     margin-top: 1rem;
+    justify-content: space-between;
   }
 
-  .mobile-menu-control {
+  .mobile-nav-toggle {
     display: none;
   }
 
-  .menu {
+  .primary-navigation {
     width: 100%;
     height: auto;
     position: relative;
@@ -351,11 +360,11 @@ footer nav {
     justify-content: space-between;
   }
 
-  .menu::after {
+  .primary-navigation::after {
     display: none;
   }
 
-  .menu li a {
+  .primary-navigation li a {
     color: var(--white);
     font-size: var(--font-size);
     margin-left: 3rem;
